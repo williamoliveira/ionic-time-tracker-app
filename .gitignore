@@ -8,3 +8,4 @@ bower_components
 .idea
 .git-private
 .io-config.json
+my-release-key.keystore
