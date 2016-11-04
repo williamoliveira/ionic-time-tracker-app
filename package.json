@@ -1,0 +1,54 @@
+{
+  "name": "gestor_tempo",
+  "version": "0.1.1",
+  "description": "Gestor de Tempo: An Ionic project",
+  "scripts": {
+    "serve": "webpack-dev-server --config webpack.config.dev.js --watch --progress --colors",
+    "serve-livereload": "webpack-dev-server --config webpack.config.dev.js --watch --progress --colors --inline",
+    "watch-dev": "webpack --config webpack.config.dev.js --progress --colors --watch",
+    "build-dev": "webpack --config webpack.config.dev.js --progress --colors",
+    "build-prod": "webpack --config webpack.config.production.js --progress --colors"
+  },
+  "dependencies": {
+    "angular-moment": "^1.0.0-beta.4",
+    "knex": "^0",
+    "moment": "^2.11.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.14",
+    "babel-loader": "^6",
+    "bower": "^1.6.5",
+    "css-loader": "~0",
+    "exports-loader": "~0",
+    "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "~1",
+    "file-loader": "~0",
+    "html-loader": "^0.4.0",
+    "html-webpack-plugin": "^2.7.2",
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.3",
+    "loader-utils": "^0.2.6",
+    "ng-annotate-loader": "*",
+    "ng-cache-loader": "~0",
+    "ngtemplate-loader": "~1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "string-replace-loader": "^1.0.0",
+    "style-loader": "~0",
+    "url-loader": "~0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard",
+    "ionic-plugin-deploy"
+  ],
+  "cordovaPlatforms": [
+    "android"
+  ]
+}

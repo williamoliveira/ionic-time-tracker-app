@@ -1,0 +1,23 @@
+<ion-modal-view view-title="Criar categoria">
+
+  <ion-header-bar align-title="left" class="bar-positive">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="closeCreateModal()"></button>
+    <h1 class="title">Criar categoria</h1>
+  </ion-header-bar>
+
+  <ion-content overflow-scroll="false" class="has-header">
+
+    <div class="list padding">
+
+      <label class="item item-input">
+        <span class="input-label">Nome</span>
+        <input type="text" ng-model="category.name" placeholder="Ex: Reunião">
+      </label>
+
+      <button ng-click="createCategory(category); closeCreateModal();"
+              class="button button-balanced button-block">Salvar</button>
+    </div>
+
+  </ion-content>
+
+</ion-modal-view>

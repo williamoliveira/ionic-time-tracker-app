@@ -1,0 +1,28 @@
+<ion-modal-view view-title="Editar atividade">
+
+  <ion-header-bar align-title="left" class="bar-positive">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="closeEditModal()"></button>
+    <h1 class="title">Editar atividade</h1>
+  </ion-header-bar>
+
+  <ion-content overflow-scroll="false" class="has-header">
+
+    <div class="list padding">
+
+      <label class="item item-input">
+        <span class="input-label">Nome</span>
+        <input type="text" ng-model="category.name" placeholder="Ex: Reunião">
+      </label>
+
+      <label class="item item-select item-stacked-label" ionic-icon-picker ng-model="category.icon">
+        <span class="input-label">Ícone</span>
+        <i class="icon {{category.icon}}"></i>
+      </label>
+
+      <button ng-click="updateCategory(category);"
+              class="button button-balanced button-block">Salvar</button>
+    </div>
+
+  </ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,17 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower",
+    "angular-ui-router": "*",
+    "ionic-platform-web-client": "^0.2.1",
+    "angular-websql": "^1.0.2",
+    "ion-datetime-picker": "^0.1.2"
+  },
+  "dependencies": {
+    "ionic-modal-select": "git@github.com:inmagik/ionic-modal-select.git#daa49eb38578b820fc7bebd825a0fb2a575b4c9b",
+    "angular-charts": "^0.2.7",
+    "pie-chart": "^1.0.0",
+    "ionic-toast": "^0.2.0"
+  }
+}

@@ -1,0 +1,49 @@
+<ion-view view-title="Relatórios">
+  <ion-content class="has-header">
+
+    <div class="list">
+      <label class="item item-select item-stacked-label">
+        <span class="input-label">Intervalo</span>
+        <select ng-options="interval as interval.name for interval in intervals track by interval.name"
+                ng-model="selectedInterval"
+                ng-change="intervalChanged(selectedInterval)"></select>
+      </label>
+      <!--<label ion-datetime-picker ng-model="interval.startsAt" class="item item-select item-stacked-label"-->
+             <!--ng-class="{'disabled': selectedInterval.name !== customInterval.name}">-->
+        <!--<span class="input-label">Data inicial</span>-->
+        <!--{{interval.startsAt | date: "dd/MM/yyyy HH:mm:ss"}}-->
+      <!--</label>-->
+      <!--<label ion-datetime-picker ng-model="interval.endsAt" class="item item-select item-stacked-label"-->
+             <!--ng-class="{'disabled': selectedInterval.name !== customInterval.name}">-->
+        <!--<span class="input-label">Data final</span>-->
+        <!--{{interval.endsAt | date: "dd/MM/yyyy HH:mm:ss"}}-->
+      <!--</label>-->
+
+      <label class="item item-input item-stacked-label"
+             ng-class="{'disabled': selectedInterval.name !== customInterval.name}">
+        <span class="input-label">Data inicial</span>
+        <input type="datetime-local"
+               ng-model="interval.startsAt"
+               ng-disabled="selectedInterval.name !== customInterval.name"
+               placeholder="Data inicial">
+      </label>
+      <label class="item item-input item-stacked-label"
+             ng-class="{'disabled': selectedInterval.name !== customInterval.name}">
+        <span class="input-label">Data final</span>
+        <input type="datetime-local"
+               ng-model="interval.endsAt"
+               ng-disabled="selectedInterval.name !== customInterval.name"
+               placeholder="Data final">
+      </label>
+
+      <div class="padding">
+        <button ng-click="filterListing(interval)"
+                class="button button-positive button-block">Exibir</button>
+      </div>
+
+    </div>
+
+
+
+  </ion-content>
+</ion-view>

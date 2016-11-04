@@ -1,0 +1,22 @@
+<ion-modal-view view-title="Criar categoria">
+
+  <ion-header-bar class="bar-stable">
+    <h1 class="title">Selecione um ícone</h1>
+  </ion-header-bar>
+
+  <ion-content class="has-header">
+    <ul class="icon-picker-list">
+      <li ng-repeat="icon in icons track by $index"
+           ng-click="selectIcon(icon)" class="icon {{icon}}">
+      </li>
+    </ul>
+
+  </ion-content>
+
+  <ion-footer-bar class="bar-stable">
+    <button class="button button-stable modal-select-close-button" ng-click="closeModal()">
+      Cancelar
+    </button>
+  </ion-footer-bar>
+
+</ion-modal-view>

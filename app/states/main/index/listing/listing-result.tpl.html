@@ -1,0 +1,40 @@
+<ion-modal-view view-title="Resultados do relatório">
+
+  <ion-header-bar align-title="left" class="bar-positive">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="closeResultModal()"></button>
+    <h1 class="title">Resultados do relatório</h1>
+  </ion-header-bar>
+
+  <ion-content overflow-scroll="false" class="has-header">
+
+    <div class="text-center" ng-if="categories.length < 1">
+      <br><br>
+      Nenhum registro neste período.
+    </div>
+
+    <div class="row">
+      <div class="pie-chart">
+        <pie-chart data="chartData" options="chartOptions"></pie-chart>
+      </div>
+    </div>
+
+    <div class="list">
+
+      <a class="item item-icon-right item-icon-left "
+         ng-click="displayCategoryTimes(category)"
+         ng-repeat="category in categories track by category.id"
+         style="border-left: solid 6px {{category.color}}">
+
+        <i class="icon {{category.icon}}" style="color: {{category.color}};"></i>
+        <b>{{category.name}}:</b> {{ category.totalTimer }}
+
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </a>
+
+
+    </div>
+
+  </ion-content>
+
+</ion-modal-view>

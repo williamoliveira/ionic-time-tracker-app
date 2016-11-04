@@ -1,0 +1,40 @@
+<ion-modal-view view-title="{{category.name}}">
+
+  <ion-header-bar align-title="left" class="bar-positive">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="closeTimeModal()"></button>
+    <h1 class="title">{{category.name}}</h1>
+  </ion-header-bar>
+
+  <ion-content overflow-scroll="false" class="has-header">
+
+
+
+    <div class="card">
+      <div class="item item-divider">
+        Tempo total
+      </div>
+      <div class="item item-text-wrap">
+        {{category.totalTimer}}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        Tempos
+      </div>
+
+      <div class="item item-text-wrap" ng-if="category.times.length < 1">
+        Nenhum registro.
+      </div>
+
+      <a class="item" ng-repeat="time in category.times track by time.id">
+          {{time.timer}} ({{time.startedAt | date:'dd/MM/yyyy HH:mm:ss'}}
+          até {{time.endedAt | date:'dd/MM/yyyy HH:mm:ss'}})
+      </a>
+    </div>
+
+
+
+  </ion-content>
+
+</ion-modal-view>

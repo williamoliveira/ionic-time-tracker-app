@@ -1,0 +1,14 @@
+<ion-view view-title="Cronômetros" class="bg-grey">
+  <ion-content class="has-header">
+
+    <stopwatch ng-repeat="stopwatch in stopwatches track by stopwatch"></stopwatch>
+
+    <div class="padding-left padding-right">
+      <button ng-click="newStopwatch()" class="button button-balanced button-block">
+        <i class="ion-plus"></i>
+        Novo cronômetro
+      </button>
+    </div>
+
+  </ion-content>
+</ion-view>

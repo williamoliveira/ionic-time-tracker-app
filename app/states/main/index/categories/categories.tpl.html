@@ -1,0 +1,24 @@
+<ion-view view-title="Atividades">
+  <ion-content class="has-header">
+
+    <div class="padding">
+      <button class="button button-balanced button-block" ng-click="openCreateModal()">
+        <i class="ion-plus"></i>
+        Nova atividade
+      </button>
+    </div>
+
+    <div class="list">
+
+      <div class="item item-icon-left item-button-right"  ng-repeat="category in categories track by category.id">
+        <i class="icon {{category.icon}} positive"></i>
+        {{category.name}}
+        <button class="button button-positive" ng-click="editCategory(category)">
+          <i class="icon ion-edit" style="margin-left: -5px;"></i>
+        </button>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>

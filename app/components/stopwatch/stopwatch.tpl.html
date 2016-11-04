@@ -1,0 +1,47 @@
+<div class="card">
+
+  <label class="item item-select item-stacked-label" modal-select
+         ng-model="selectedCategory"
+         options="categories"
+         cancel-button="Cancelar"
+         reset-button="Resetar"
+         modal-title="Selecione uma atividade"
+         load-list-message="Carregando..."
+         search-placeholder="Pesquisar..."
+         cancel-search-button="Limpar"
+         ng-disabled="$stopwatch.data.status !== 'stopped'"
+         ng-class="{'disabled': ($stopwatch.data.status !== 'stopped')}">
+    <span class="input-label">Atividade</span>
+
+    <i class="icon {{selectedCategory.icon}} positive"></i>
+    <span style="vertical-align: bottom;">
+      {{selectedCategory.name}}
+    </span>
+
+    <!-- inside modal -->
+    <div class="option">
+      <i class="icon {{option.icon}} positive"></i>
+        {{option.name}}
+    </div>
+
+  </label>
+
+  <div class="padding" ng-switch="$stopwatch.data.status">
+
+    <button ng-click="run()" ng-switch-default class="button button-balanced">
+      <i class="ion-play"></i>
+    </button>
+
+    <button ng-click="pause()" ng-switch-when="running" class="button button-energized">
+      <i class="ion-pause"></i>
+    </button>
+
+    <button ng-click="stop(); destroyStopwatch($index)"
+            ng-hide="(stopwatches.length === 1) && ($stopwatch.data.status === 'stopped')" class="button button-assertive">
+      <i ng-class="($stopwatch.data.status === 'stopped') ? 'ion-close' : 'ion-stop'"></i>
+    </button>
+
+    <span id="stopwatch-timer" class="timer"></span>
+
+  </div>
+</div>

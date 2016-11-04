@@ -1,0 +1,11 @@
+{
+  "name": "Gestor de Tempo",
+  "app_id": "11111111",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
+}
