@@ -5,7 +5,6 @@ node_modules/
 platforms/
 plugins/
 bower_components
-www
 .idea
 .git-private
 .io-config.json
